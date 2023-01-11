@@ -1,1 +1,1 @@
-# proet-movies-api
+# projet-movies-api
