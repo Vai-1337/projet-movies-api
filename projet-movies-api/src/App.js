@@ -14,22 +14,27 @@ const App = () => {
   const [query, setQuery] = value3
   const [isLoading, setIsLoading] = value4
 
-  console.log(data2)
+  console.log(data)
   return (
     <div className="frame">
       <div className="topcards">
-        {isLoading && data ?
-          data.map((e, i) =>
-            e.attributes.titles.en ?  <MiniCard key={i}
-                title={e.attributes.titles.en}
-                image={e.attributes.posterImage.tiny}
-                rating={e.attributes.averageRating}/>  : 
-                "") : <h1>Loading</h1> }
+          {isLoading && data ? data.map((e, i) =>
+            e.attributes.titles.en ?  
+              <MiniCard key={i}
+                  title={e.attributes.titles.en}
+                  image={e.attributes.posterImage.tiny}
+                  rating={e.attributes.averageRating}/>  : 
+                  "") : <h1>Loading</h1> }
       </div>
-          <div>
-          {query && data2 && data2.map((e, i) =>  <AnimeCard key={i} title={e.attributes.titles.en}
-                image={e.attributes.posterImage.tiny}
-                rating={e.attributes.averageRating}/> )}
+          <div className='animcards'>
+          {query && data2 && data2.map((e, i) =>  
+              <AnimeCard  key={i} 
+                    title={e.attributes.titles.en}
+                    image={e.attributes.posterImage.small}
+                    rating={e.attributes.averageRating}
+                    video={e.attributes.youtubeVideoId}
+            /> 
+          )}
           </div>
 </div>  );
 };

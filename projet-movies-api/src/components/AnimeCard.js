@@ -7,32 +7,38 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import { Link } from "react-router-dom"
+import Video from "./Video"
 
-const AnimeCard = () => {
-  const [data, setData] = useState(AnimeContext);
-console.log(data)
+const AnimeCard = (props) => {
   const card = (
 
     <React.Fragment>
  
 
 
-      <div className="card">
+      <div className="animecard">
           <CardContent >
-            <img className="logo2" src="./Untitled-2.png" alt=""></img>
+          <Typography className="videolink" variant="body2">
+            <Link to={`/${props.video}`} element={<Video />} >
+            <button onClick={()=> <Video />}>Trailer</button>
+            </Link>
+            </Typography>
+            <img className="posteranimecard" src={props.image} alt=""></img>
 
-            <Typography className="titre" variant="h5" component="div">
-             
+            <Typography className="titleanimecard" variant="h5" component="div">
+             {props.title}
             </Typography>
+
+         
+
             <Typography
-              className="poster"
+              className="ratinganimecard"
               sx={{ mb: 1.5 }}
-              color="text.secondary"
-            >
-              <img src="" alt="" />
+              color="text.secondary">
+              {props.rating}
             </Typography>
-            <Typography className="rating" variant="body2">
-            </Typography>
+            
           </CardContent>
     
       </div>

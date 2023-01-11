@@ -8,7 +8,7 @@ export const AnimeController = ({ children }) => {
   const [query, setQuery] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [input, setInput] = useState("")
-const [data2, setData2] = useState([])
+  const [data2, setData2] = useState([])
 
 
   const fetchData = async () => {
@@ -40,9 +40,15 @@ const [data2, setData2] = useState([])
 
   return (
     <AnimeContext.Provider
-      value={{value : [data2, setData2], value2: [data, setData], value3: [query, setQuery], value4:[isLoading, setIsLoading], value5: [input, setInput]}}
+      value={{
+              value : [data2, setData2], 
+              value2: [data, setData], 
+              value3: [query, setQuery], 
+              value4: [isLoading, setIsLoading], 
+              value5: [input, setInput]
+            }}
     >
-      {isLoading && children }
+            {isLoading && children }
     </AnimeContext.Provider>
   );
 };

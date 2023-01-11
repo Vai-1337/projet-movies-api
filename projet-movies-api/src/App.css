@@ -1,38 +1,101 @@
+.animecard{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 body {
 
 background-color: black;
-
+text-align: center;
 
 }
 
 .topframe{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width:900px;
 
+  display: flex!important;
+  align-content: center !important; 
+  align-items: center !important;
+  justify-content: center !important;
+  flex-direction: column !important;
+}
+
+
+.navbar{
+
+  width:900px;
+  margin: 30px;
+  font-size: 20px;
+   font-family: "Montserrat";
+   text-transform: uppercase;
+   font-weight: bold;
+   height: 130px;
+   background-color: rgb(31, 31, 31);
+   border-radius: 5px;
+}
+
+.logonav {
+  margin-left: 30px;
+  width: 300px;
+  float: left;
+}
+
+.buttonblock{
+
+  display: flex !important;
+  align-items: center !important;
+  align-content: center !important;
+}
+
+.animebutton {
+
+color: rgb(255, 255, 255) !important;
+margin-left: 50px !important;
+height: 130px;
+width: 100px !important;
+border-left: 1px solid rgb(255, 255, 255) !important;
+border-right: 1px solid rgb(246, 246, 246) !important;
+border-radius: 0 !important;
 }
 
 .frame{
 
-  text-align: center;
-
+margin: 20px;
+display: flex;
+align-content: center;
+justify-content: center;
+align-items: center;
 }
 
+
 .topcards{
+width: 900px;
 overflow: scroll;
 display: flex;
 flex-direction: row;
-flex-wrap: nowrap;
+
 }
+
+.card{
+
+  display: flex;
+  justify-content: center;
+  background-color: #191919;
+  
+}
+
+.cardbox:hover{
+
+  background-color: #4d4d4d !important;
+  transform: scale(1.1)}
+
 
 .inputsearch{
 
   background-color: rgb(255 255 255 / 0.5); 
   width:450px;
   height: 40px;
+  margin-top: 50px;
   margin-right: 15px;
   border: none;
   box-shadow: 1px 1px 3px black;
@@ -71,26 +134,51 @@ width: 900px;
 height: 300px;
 }
 
-.card{
-  display: flex;
-  justify-content: center;
+
+
+.titre{
+color: white;
+font-size: 15px !important;
+font-family: "Montserrat" !important;
+text-transform: uppercase;
+font-weight: bold !important;
+}
+
+.rating{
+  background-color: white;
+  width:40px;
+  height: 40px;
+  color: black !important;
+font-size: 15px !important;
+font-family: "Montserrat" !important;
+text-transform: uppercase;
+font-weight: bold !important;
+border: 10px solid rgb(218, 171, 3);
+border-radius: 50%;
+position: relative;
+top: -15%;
+left: 10%;
+vertical-align:middle !important;
+text-align: center !important;
+
+
+
 
 }
 
 .cardbox {
   
-  max-height: 330px;
-  min-height: 330px;
-  text-align: center;
+  max-height: 300px;
+  min-height: 300px;
   width: 250px;
-  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.935);
-  border-radius: 10px !important;
-  margin: 10px 50px;
-  
+  border-radius: 2px !important;
+  border: none !important;
+
 }
 
 .cardbox img {
 
+  margin-top:15px;
   width: 125px;
 }
 
