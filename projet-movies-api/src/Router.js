@@ -6,12 +6,14 @@ import SearchBar from "./components/SearchBar";
 const Router = () => {
   return (
     <>
+    <div className="topframe">
       <Navbar />
       <SearchBar />      
+     </div>
       <Routes>
         <Route path="/" element={<App />} />
       </Routes>
-    </>
+      </>
   );
 };
 

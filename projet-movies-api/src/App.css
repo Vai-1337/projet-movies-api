@@ -1,10 +1,24 @@
+
 body {
-  margin: 0;
-  background-color: rgb(66, 63, 63);
-  
+
+background-color: black;
+
+
 }
-a {
-  color: white;
+
+.topframe{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width:900px;
+
+}
+
+.frame{
+
+  text-align: center;
+
 }
 
 .topcards{
@@ -14,10 +28,53 @@ flex-direction: row;
 flex-wrap: nowrap;
 }
 
+.inputsearch{
+
+  background-color: rgb(255 255 255 / 0.5); 
+  width:450px;
+  height: 40px;
+  margin-right: 15px;
+  border: none;
+  box-shadow: 1px 1px 3px black;
+  border-radius: 3px;
+  font-family: "Montserrat";
+  font-size: 20px;
+  padding-left: 20px;
+  font-weight: bold;
+
+}
+
+
+
+.searchbutton{
+
+  background-color: black;
+  color: white;
+  width: 80px;
+  height: 45px;
+  border: none;
+  font-size: 15px;
+  padding: 10px;
+  box-shadow: 1px 1px 3px rgb(0, 0, 0);
+  border-radius: 3px;
+  font-family: "Noto Serif JP";
+}
+
+.search{
+
+display: flex;
+justify-content: center;
+align-items: center;
+background-size: cover;
+background-image: url("../public/search-bg1.png");
+width: 900px;
+height: 300px;
+}
+
 .card{
   display: flex;
   justify-content: center;
-  
+
 }
 
 .cardbox {

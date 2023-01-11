@@ -16,7 +16,7 @@ const App = () => {
 
   console.log(data2)
   return (
-    <>
+    <div className="frame">
       <div className="topcards">
         {isLoading && data ?
           data.map((e, i) =>
@@ -31,8 +31,7 @@ const App = () => {
                 image={e.attributes.posterImage.tiny}
                 rating={e.attributes.averageRating}/> )}
           </div>
-    </>
-  );
+</div>  );
 };
 
 export default App;
