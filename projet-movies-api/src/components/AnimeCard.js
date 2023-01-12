@@ -9,8 +9,16 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom"
 import Video from "./Video"
+import YouTube from 'react-youtube'
 
 const AnimeCard = (props) => {
+
+  const [showVideo, setShowVideo] = useState(false);
+
+  
+  
+  
+  
   const card = (
 
     <React.Fragment>
@@ -19,11 +27,7 @@ const AnimeCard = (props) => {
 
       <div className="animecard">
           <CardContent >
-          <Typography className="videolink" variant="body2">
-            <Link to={`/${props.video}`} element={<Video />} >
-            <button onClick={()=> <Video />}>Trailer</button>
-            </Link>
-            </Typography>
+       
             <img className="posteranimecard" src={props.image} alt=""></img>
 
             <Typography className="titleanimecard" variant="h5" component="div">
@@ -38,6 +42,16 @@ const AnimeCard = (props) => {
               color="text.secondary">
               {props.rating}
             </Typography>
+            <Typography className="videolink" variant="body2">
+
+
+<Button className="trailerbutton" onClick={() => setShowVideo(!showVideo)}>
+  {showVideo ? 'Hide' : 'Trailer'}
+        </Button>
+
+{showVideo && <YouTube videoId={props.video}/>}
+
+  </Typography>
             
           </CardContent>
     
@@ -48,7 +62,7 @@ const AnimeCard = (props) => {
 
   return (
     <Box sx={{ minWidth: 275 }}>
-      <Card className="cardbox" variant="outlined">
+      <Card className="cardboxanimr" variant="outlined">
         {card}
       </Card>
       {/* {cardComment ? <CardsComment id={props.idcomment}/> : ""} */}

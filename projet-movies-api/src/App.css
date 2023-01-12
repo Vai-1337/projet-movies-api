@@ -1,7 +1,18 @@
 .animecard{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+
+}
+
+.botcards{
+
+
+
+}
+
+.cardboxanime{
+
+
+
 }
 
 body {
@@ -146,8 +157,8 @@ font-weight: bold !important;
 
 .rating{
   background-color: white;
-  width:40px;
-  height: 40px;
+  width:60px;
+  height: 60px;
   color: black !important;
 font-size: 15px !important;
 font-family: "Montserrat" !important;
@@ -160,8 +171,9 @@ top: -15%;
 left: 10%;
 vertical-align:middle !important;
 text-align: center !important;
-
-
+/* padding: 10px; */
+box-sizing: border-box;
+line-height: 40px !important;
 
 
 }

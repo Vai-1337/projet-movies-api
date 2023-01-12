@@ -15,7 +15,9 @@ const App = () => {
   const [isLoading, setIsLoading] = value4
 
   console.log(data)
+  
   return (
+    <div> 
     <div className="frame">
       <div className="topcards">
           {isLoading && data ? data.map((e, i) =>
@@ -26,7 +28,8 @@ const App = () => {
                   rating={e.attributes.averageRating}/>  : 
                   "") : <h1>Loading</h1> }
       </div>
-          <div className='animcards'>
+      </div>
+          <div className='botcards'>
           {query && data2 && data2.map((e, i) =>  
               <AnimeCard  key={i} 
                     title={e.attributes.titles.en}
