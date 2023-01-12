@@ -14,6 +14,7 @@ const MiniCard = (props) => {
 
     const card = (
         <React.Fragment>
+
       <div className='card'>
       
       
@@ -40,10 +41,15 @@ const MiniCard = (props) => {
       
       
         return (
+          <div>
+
+
           <Box sx={{ minWidth: 275 }}>
+
             <Card className="cardbox" variant="outlined">{card}</Card>
             {/* {cardComment ? <CardsComment id={props.idcomment}/> : ""} */}
           </Box>
+          </div>
         );
       }
 

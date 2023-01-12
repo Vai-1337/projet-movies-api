@@ -15,13 +15,17 @@ const App = () => {
   const [isLoading, setIsLoading] = value4
 
   console.log(data)
-  
+  console.log(data[0].id)
+
   return (
     <div> 
+        <h1 className="top10">Top 10</h1>
+
     <div className="frame">
+
       <div className="topcards">
           {isLoading && data ? data.map((e, i) =>
-            e.attributes.titles.en ?  
+            e.attributes.titles.en ?
               <MiniCard key={i}
                   title={e.attributes.titles.en}
                   image={e.attributes.posterImage.tiny}
@@ -36,10 +40,13 @@ const App = () => {
                     image={e.attributes.posterImage.small}
                     rating={e.attributes.averageRating}
                     video={e.attributes.youtubeVideoId}
+                    id={e.id}
+                    titlejp={e.attributes.titles.ja_jp}
             /> 
           )}
           </div>
 </div>  );
+
 };
 
 export default App;

@@ -1,5 +1,6 @@
 import { createContext, useState, useEffect } from "react";
 import axios from "axios";
+import { useParams } from "react-router-dom";
 
 export const AnimeContext = createContext();
 
@@ -10,11 +11,12 @@ export const AnimeController = ({ children }) => {
   const [input, setInput] = useState("")
   const [data2, setData2] = useState([])
 
+  let {id} = useParams()
 
   const fetchData = async () => {
     try {
       const callData = await axios.get(
-        "https://kitsu.io/api/edge/anime?page[limit]=20&page[offset]=1"
+        "https://kitsu.io/api/edge/anime?page%5Blimit%5D=10&page%5Boffset%5D=0&sort=-averageRating"
       );
      setData(callData.data.data);
       setIsLoading(true);
@@ -34,6 +36,7 @@ export const AnimeController = ({ children }) => {
     }
   };
 
+
   useEffect(() => {
     query ? fetchData2() : fetchData();
   }, [query]);
@@ -45,7 +48,8 @@ export const AnimeController = ({ children }) => {
               value2: [data, setData], 
               value3: [query, setQuery], 
               value4: [isLoading, setIsLoading], 
-              value5: [input, setInput]
+              value5: [input, setInput],
+
             }}
     >
             {isLoading && children }

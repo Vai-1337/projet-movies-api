@@ -3,8 +3,13 @@ import App from "./App";
 import Navbar from "./components/Navbar";
 import SearchBar from "./components/SearchBar";
 import Video from "./components/Video"
+import AnimeDetails from "./components/AnimeDetails";
+import { AnimeContext } from "./context/AnimeContext";
+import { useContext } from "react";
 
 const Router = () => {
+
+
   return (
     <>
     <div className="topframe">
@@ -13,7 +18,7 @@ const Router = () => {
      </div>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/:video" element={<Video/>}/>
+      
       </Routes>
       </>
   );
