@@ -1,51 +1,48 @@
-import React from 'react'
-import CssBaseline from '@mui/material/CssBaseline';
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import Paper from '@mui/material/Paper';
-import Fab from '@mui/material/Fab';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
-import ListItemText from '@mui/material/ListItemText';
-import Avatar from '@mui/material/Avatar';
-import StyledFab from '@mui/material/Fab';
 
-const AnimeDetails = (props) => {
-console.log(props)
+const bull = (
+  <Box
+    component="span"
+    sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
+  >
+    •
+  </Box>
+);
 
-return(
+
+              // titlejp={props.titlejp} 
+              // titleenjp={props.en_jp}
+              // status={props.status}
+              // synopsis={props.synopsis}
+              // description={props.description}
+
+
+
+export default function AnimeDetails(props) {
+  return (
     
-
-        <div className="animedetails">
-        <React.Fragment>
-    
-          <CssBaseline />
-          <Paper className="detailspanel" square sx={{ pb: '50px' }}>
+    <Card className='animecards' style={{color:'white'}}>
+      <CardContent>
+        <Typography sx={{ fontSize: 14 }} color="white" gutterBottom>
+          <h1> {props.titlejp} </h1>
+        </Typography>
+       
+        <Typography sx={{ mb: 1.5 }} color="text.secondary">
         
-    
-            <Typography>
-            {props.title}
-            </Typography>
-            
-            <List sx={{ mb: 2 }}>
-            
-                <React.Fragment>
-                  <ListItem >
-                   
-                    <ListItemText >
-
-                      </ListItemText>
-                  </ListItem>
-                
-                </React.Fragment>
-            </List>
-          </Paper>
-         
-        </React.Fragment>
-        </div>
-      );
-    
+        </Typography>        
+        <Typography variant="body1" component="p" gutterBottom>        
+        <p className='synopsis'> {props.synopsis}</p>
+          <br />
+        </Typography>
+      </CardContent>
+   
+    </Card>
+   
+  );
 }
-
-export default AnimeDetails;
-

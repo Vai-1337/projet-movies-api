@@ -13,6 +13,9 @@ const SearchBar = () => {
   
   return (
     <div className="search">
+      
+
+    <h1 >久し振り !<br/>Welcome to AnimDB !<br/>The best Anime dabase ever !</h1>
     <form onSubmit={handleClick}>
       <input className='inputsearch'
         type="text"
